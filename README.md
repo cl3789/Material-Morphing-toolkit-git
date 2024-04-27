@@ -33,5 +33,20 @@ This Toolkit allows the user the create material morphing sequences for psychoph
 ## Cross-material Morphing
 * A sample morphing sequence from [Rock to Squishy Toy](morphing_sequence/rock0_to_toy12_low): A Rock (e.g., rock0) is gradually transformed into a Squishy Toy (e.g., toy12) with 41 linear interpolation steps. 
 
+* We provide a [notebook](prepare_morphing_sequence.ipynb) to create the morphing sequences. 
+
+## Citing
+
+If you found this repository useful, please consider citing:
+```bibtex
+@article{liao2024probing,
+  title={Probing the Link Between Vision and Language in Material Perception},
+  author={Liao, Chenxi and Sawayama, Masataka and Xiao, Bei},
+  journal={bioRxiv},
+  pages={2024--01},
+  year={2024},
+  publisher={Cold Spring Harbor Laboratory}
+}
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

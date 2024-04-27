@@ -21,6 +21,7 @@ def generate_from_w(G, w_codes, noise_mode = "const"):
 
 
 def edit_layer(w_codes, direction, step, layer_indices, start_distance, end_distance):
+  """Linear interpolate the latent codes (either W or W+) at selected layers (layer_indices)"""
 
   x = w_codes[:, np.newaxis]
 
@@ -116,12 +117,14 @@ class MergeDomains():
     return grab_layers
 
   def get_morph_generator(self, layers):
+    """Produce a list of StyleGAN generators with morphed weights at selected layers (layers)"""
+    
     distance = np.linspace(0, 1, self.steps)
     print("morphing steps:",distance)
     all_layers = self.get_weights_names("all")
     subset_layers = self.get_weights_names(layers)
 
-    G_models = []
+    G_models = [] # initialize a list for saving interpolated generators
     for t in distance:
       G_new = copy.deepcopy(self.G1)
       G_new_state_dict = {}
@@ -164,6 +167,7 @@ class MergeDomains():
   def get_midpoint(self, w_source, w_target, G_layers, layers_ind=list(range(18))):
     direction = w_target - w_source
     num_img = w_target.shape[0]
+    # Set the step=3 for the midpoint for the interpolation of the latent codes
     res = edit_layer(np.expand_dims(w_source, axis=0), direction = direction, step=3, layer_indices = layers_ind, start_distance=0, end_distance=1)
     new_codes = res[0][1]
 
