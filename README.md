@@ -29,14 +29,14 @@ This Toolkit allows the user the create material morphing sequences for psychoph
 * We provided samples from three material categories: Soap, Rock and Squishy Toys. The images cover two major lightings: Low and Strong indoor lighting. 
 
 * You can find the generated [Materials from W latent sapce](material_latent_code_W).
-  - Soap: soap_strong (soap_strong_30img.npy), soap_low (soap_low_30img.npy)
-  - Rock: rock_strong (rock_strong_30img.npy), rock_low (rock_low_30img.npy)
-  - Squishy toy: toy_strong (toy_low_30img.npy), toy_low (toy_strong_30img.npy)
+  - Soap: soap_strong (soap_strong.npy), soap_low (soap_low.npy)
+  - Rock: rock_strong (rock_strong.npy), rock_low (rock_low.npy)
+  - Squishy toy: toy_strong (toy_low.npy), toy_low (toy_strong.npy)
   
 ## Cross-material Morphing
 * Examples of [material morphing sequences](info_imgs/material_morphing_teaser.png): A 'source' material is gradually transformed into the 'target' material with nine linear interpolation steps. 
 
-* We provide a [notebook](prepare_morphing_sequence.ipynb) to create the morphing sequences. 
+* We provide a [notebook](Material_Morphing_Toolkit.ipynb) to create the morphing sequences. 
 
 ## Citing
 
