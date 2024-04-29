@@ -12,6 +12,9 @@
 
 </div>
 
+![teaser](info_imgs/material_morphing_teaser.png)
+
+We use an unsupervised image synthesis model, StyleGAN2-ADA, to generate images of diverse materials based on the learning of real-world photos. As a result, the model parameterizes the statistical structures of material appearances and facilitates linear interpolation between image data points, allowing us to morph between different material categories. This approach enables us to continuously vary the multidimensional structural features of materials (e.g., the combination of shape and color variation) and build an expanded Space of Morphable Material Appearance.
 
 This Toolkit allows the user the create material morphing sequences for psychophysical experiments. 
 
@@ -31,7 +34,7 @@ This Toolkit allows the user the create material morphing sequences for psychoph
   - Squishy toy: toy_strong (toy_low_30img.npy), toy_low (toy_strong_30img.npy)
   
 ## Cross-material Morphing
-* A sample morphing sequence from [Rock to Squishy Toy](morphing_sequence/rock0_to_toy12_low): A Rock (e.g., rock0) is gradually transformed into a Squishy Toy (e.g., toy12) with 41 linear interpolation steps. 
+* Examples of [material morphing sequences](info_imgs/material_morphing_teaser.png): A 'source' material is gradually transformed into the 'target' material with nine linear interpolation steps. 
 
 * We provide a [notebook](prepare_morphing_sequence.ipynb) to create the morphing sequences. 
 
